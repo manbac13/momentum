@@ -2,7 +2,7 @@ import {
   Alert,
   AlertTitle,
   Card,
-  CardActions,
+  CardContent,
   CardHeader,
   Chip,
   IconButton,
@@ -131,7 +131,7 @@ const TaskCard = ({ data }) => {
           }
         />
         {data.description && (
-          <CardActions sx={{ p: 2 }}>
+          <CardContent sx={{ p: 2 }}>
             <Typography
               sx={{
                 fontSize: "14px",
@@ -142,7 +142,7 @@ const TaskCard = ({ data }) => {
             >
               {data.description}
             </Typography>
-          </CardActions>
+          </CardContent>
         )}
       </Card>
       <TaskModal

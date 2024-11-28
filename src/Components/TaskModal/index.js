@@ -23,6 +23,7 @@ import {
 import * as Yup from "yup";
 import useTasks from "Hooks/Tasks/useTasks";
 import { v4 as uuidv4 } from "uuid";
+import { getFormattedDate } from "Utils";
 
 const priorities = [
   { level: "Low", color: "primary" },
@@ -55,12 +56,13 @@ const TaskModal = ({ open, handleClose, data }) => {
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={(values) => {
+            const timestamp = getFormattedDate(new Date());
             if (data) {
-              editTaskAction({ id: data.id, ...values });
+              editTaskAction({ id: data.id, updated_at: timestamp, ...values });
               handleClose();
             } else {
               const id = uuidv4();
-              addTaskAction({ id: id, ...values });
+              addTaskAction({ id: id, created_at: timestamp, ...values });
               handleClose();
             }
           }}
