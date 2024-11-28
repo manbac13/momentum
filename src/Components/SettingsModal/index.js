@@ -4,7 +4,7 @@ import { useState } from "react";
 import Appearance from "Sections/Settings/appearance";
 import Data from "Sections/Settings/data";
 
-const {
+import {
   Dialog,
   DialogTitle,
   DialogContent,
@@ -12,7 +12,7 @@ const {
   Tab,
   Stack,
   IconButton,
-} = require("@mui/material");
+} from "@mui/material";
 
 const SettingsModal = ({ open, handleClose }) => {
   const [value, setValue] = useState("1");

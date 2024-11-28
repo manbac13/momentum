@@ -2,7 +2,7 @@ import { Trash } from "iconsax-react";
 import swal from "@sweetalert/with-react";
 import { persistor } from "Store";
 
-const { Grid2, Typography, Button } = require("@mui/material");
+import { Grid2, Typography, Button } from "@mui/material";
 
 const Data = () => {
   const handleClearClick = () => {
