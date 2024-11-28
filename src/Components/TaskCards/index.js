@@ -77,7 +77,6 @@ const TaskCard = ({ data }) => {
       closeOnClickOutside: false,
     }).then((willDelete) => {
       if (willDelete) {
-        console.log("Item deleted");
         deleteTaskAction(data);
         swal("Poof! Your task has been deleted!", {
           icon: "success",
@@ -173,7 +172,6 @@ const TaskCard = ({ data }) => {
           onClick={() => {
             handleClose();
             setAddTaskOpen(true);
-            console.log("data to be edited", data);
           }}
         >
           <Edit2 size="16" style={{ marginRight: "8px" }} />

@@ -20,7 +20,6 @@ const StatusCard = ({ title = "Pending", data }) => {
       return "success";
     }
   };
-  console.log("data", data);
   return (
     <>
       <Card

@@ -100,7 +100,6 @@ const taskSlice = createSlice({
         const sourceData = Array.from(sourceCol.data);
         const destData = Array.from(destCol.data);
         const [removed] = sourceData.splice(source.index, 1);
-        console.log("removed item", current(removed), current(destCol));
         const updatedItem = {
           ...removed,
           state: destCol.title,

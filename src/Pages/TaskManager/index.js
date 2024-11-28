@@ -21,8 +21,6 @@ const TaskManager = () => {
   const onDragEnd = (result) => {
     moveTaskAction(result);
   };
-
-  console.log("columns", columns);
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Grid2 container spacing={6}>

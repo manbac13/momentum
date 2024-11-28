@@ -5,7 +5,6 @@ import { Moon, Sun1 } from "iconsax-react";
 const Appearance = () => {
   const theme = useTheme();
   const { setThemeAction, themeName } = useSettings();
-  console.log("theme name", themeName);
   return (
     <>
       <Grid2 container>

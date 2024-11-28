@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 
 const Dot = ({color}) => {
-    console.log('color to dot', color)
   return (
     <Box
       width={"14px"}
